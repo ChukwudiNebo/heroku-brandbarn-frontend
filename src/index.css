@@ -1,0 +1,984 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Oxygen', sans-serif;
+    user-select: none;
+} 
+
+
+*, *::before, *::after{
+    box-sizing:border-box;
+    margin:0;
+    padding: 0;
+    text-decoration: none !important;
+}
+
+/* Global Styles */
+:root {
+  --primary-color: #17a2b8;
+  --dark-color: #343a40;
+  --light-color: #f4f4f4;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+}
+
+
+
+.alert {
+  padding: 0.8rem;
+  margin: 1rem 0;
+  opacity: 0.9;
+  background: var(--light-color);
+  color: #333;
+  max-width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-primary,
+.bg-primary,
+.badge-primary,
+.alert-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.btn-light,
+.bg-light,
+.badge-light,
+.alert-light {
+  background: var(--light-color);
+  color: #333;
+}
+
+.btn-dark,
+.bg-dark,
+.badge-dark,
+.alert-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+.btn-danger,
+.bg-danger,
+.badge-danger,
+.alert-danger {
+  background: var(--danger-color);
+  color: #fff;
+}
+
+.btn-success,
+.bg-success,
+.badge-success,
+.alert-success {
+  background: var(--success-color);
+  color: #fff;
+}
+
+.btn-white,
+.bg-white,
+.badge-white,
+.alert-white {
+  background: #fff;
+  color: #333;
+  border: #ccc solid 1px;
+}
+
+
+/* navbar */
+
+.container-fluid {
+  background-color: white;
+}
+
+
+
+
+@media screen and (min-width:100px){
+    .brandbarn-logo{
+        height: 100px;
+        width: 100px;
+    }
+    #whatsappBusinessLogo{
+        height: 100px;
+        width: 100px;
+    }
+
+     .container-fluid{
+        position: fixed;
+        top: 0;
+        left: -50% -50%;
+        box-shadow: 0px 0px 10px #7777;
+        padding: 10px;
+        z-index: 100 !important;
+        /* background-color: bisque; */
+    }
+    .brandbarn{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-left: 30px;
+    }
+    .brandbarn h4{
+        position: relative;
+        top: 3px;
+    }
+    .brandbarn-logo{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
+    /* #whatsappBusinessLogo{
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+    } */
+    .ul-div{
+        padding-right: 40px;
+        position: relative;
+        top: 7px;
+        margin-left: auto;
+            z-index: 100 !important;
+    }
+    .bar{
+        margin:5px;
+        padding: 1px;
+        padding-left: 20px;
+        background-color: black;
+        transition: all 0.5s ease;
+        border-radius: 10px;
+        /* color: black; */
+    }
+
+    .bar.three {
+        background-color: rgba(255, 255, 255, 0.021);
+        -webkit-transform: rotate(-45deg) translate(10px, 1px);
+        transform: rotate(-45deg) translate(10px, 1px);
+        background-color: black !important;
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease;
+        opacity:0;
+        /* position: relative;
+        left: 0px; */
+    }
+    .bar.one {
+        -webkit-transform: rotate(45deg) translate(10px, 1px);
+        transform: rotate(45deg) translate(10px, 1px);
+        background-color: black !important;
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease;
+    }
+    .bar.two {
+        transform: rotate(-45deg);
+        background-color: black !important;
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease;
+        position: relative;
+        top: 0.8px;
+        left: 5.8px;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+    }
+    .navbarOpen{
+        display: block;
+        align-items: center;
+        position: fixed;
+        top: 70px;
+        left: 130px;
+        right: 0px;
+        background-color: whitesmoke;
+        padding: 30px 60px;
+        transition: all 4.5s ease;
+        z-index: 100;
+    }
+    .navbarOpen a{
+        color: black !important;
+        text-decoration: none !important;
+        font-weight: bold;
+        padding:0px;
+        line-height: 3.2em;
+        transition: all .5s ease;
+    }  
+     .navbarOpen a.logIn{
+        padding: 8px 15px;
+        border: 2px solid  #ff5500;
+        color:  #ff5500 !important;
+        border-radius: 5px;
+        font-size: 15px;
+        font-weight: bold;
+
+    }
+    .navbarOpen a.signUp{
+        background-color: #ff7900;
+        color: white !important;
+        border-radius: 5px;
+        padding: 10px 15px;
+        font-weight: bold;
+        font-size: 15px;
+        margin-left: 0px;
+    }
+}
+@media screen and (min-width: 576px){
+
+}
+@media screen and (min-width: 768px){
+    
+}
+
+@media screen and (min-width:992px){
+    .container-fluid{
+        position: fixed;
+        top: 0;
+        left: -50% -50%;
+        /* box-shadow: 0px 0px 10px #7777; */
+        padding: 10px;
+    }
+    .brandbarn{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-left: 50px;
+    }
+    .brandbarn h4{
+        position: relative;
+        top: 3px;
+    }
+    .brandbarn-logo{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
+    /* #whatsappBusinessLogo{
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+    } */
+    .ul-div{
+        padding-right: 40px;
+        position: relative;
+        top: 7px;
+        margin-left: auto;
+    }
+    .navbarOpen{
+        display: none;
+    }
+    .hamburger-list {
+        display: flex;
+        align-items: center;
+    }
+    .hamburger-list a{
+        color: black !important;
+        text-decoration: none !important;
+        padding: 0px 20px;
+        font-weight: bold;
+    } 
+    .hamburger-list a.logIn{
+        padding: 8px 15px;
+        border: 2px solid  #ff5500;
+        color:  #ff5500 !important;
+        border-radius: 5px;
+        font-size: 15px;
+        font-weight: bold;
+
+    }
+    .hamburger-list a.signUp{
+        background-color: #ff7900;
+        color: white !important;
+        border-radius: 5px;
+        padding: 10px 15px;
+        font-weight: bold;
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .navbarOpen{
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 1200px){
+    .container-fluid{
+        position: fixed;
+        top: 0;
+        left: -50% -50%;
+        /* box-shadow: 0px 0px 10px #7777; */
+        padding: 10px;
+        /* position: relative; */
+        z-index: 100 !important;
+    }
+    .brandbarn{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-left: 50px;
+    }
+    .brandbarn h4{
+        position: relative;
+        top: 3px;
+    }
+    .brandbarn-logo{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
+    /* #whatsappBusinessLogo{
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+    } */
+    .ul-div{
+        padding-right: 40px;
+        position: relative;
+        top: 7px;
+        margin-left: auto;
+        z-index: 100 !important;
+    }
+    .navbarOpen{
+        display: none;
+    }
+    .hamburger-list {
+        display: flex;
+        align-items: center;
+    }
+    .hamburger-list a{
+        color: black !important;
+        text-decoration: none !important;
+        padding: 0px 20px;
+        font-weight: bold;
+    } 
+    .hamburger-list a.logIn{
+        padding: 8px 15px;
+        border: 2px solid  #ff5500;
+        color:  #ff5500 !important;
+        border-radius: 5px;
+        font-size: 15px;
+        font-weight: bold;
+
+    }
+    .hamburger-list a.signUp{
+        background-color: #ff7900;
+        color: white !important;
+        border-radius: 5px;
+        padding: 10px 15px;
+        font-weight: bold;
+        font-size: 15px;
+        margin-left: 10px;
+    }
+}
+
+
+
+/* Landing page */
+
+.landingBG{
+    background-color: bisque;
+    padding-bottom: 100px;
+}
+
+    @media screen and (min-width:100px){}
+    @media screen and (min-width: 576px){}
+    @media screen and (min-width: 768px){}
+    @media screen and (min-width: 992px){}
+    @media screen and (min-width: 1200px){
+        .ldButton{
+            background-color: #ff5500 !important;
+            padding: 10px;
+            position: relative;
+            top: 180px;
+        }
+        .ldButtonLink{
+            color: white !important;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .landingContainer{
+            padding-left: 0px;      
+            padding-top: 40px;
+            /* padding-bottom: 80px; */
+        }
+        .landingPageText{
+            padding-top: 78px;
+        }
+        .landingPageText h3{
+            font-size: 50px;
+            font-weight: bold;
+        }
+        .landingPageText p{
+            font-size: 20px;
+            /* padding-top: 50px; */
+            
+            /* color: rgb(119, 119, 119); */
+        }
+        .landingPageimg{
+            height: 400px;
+            width: 550px;
+            border-radius: 10px;
+             
+        }
+        .carousel-control-prev-icon{
+            display: none !important;
+        }
+        .carousel-control-next-icon{
+            display: none !important;
+        }
+        /* .indicatorLabels{
+            border-radius: 50%;
+            width: 5%;
+        } */
+        /* indicators{
+            border-radius: 50%;
+            width: 5%;
+            background-color: black;
+            color: black;
+        } */
+        .carousel-inner{
+            position: relative;
+            /* z-index: -100 !important;    */
+        }
+        .word span {
+            position: absolute;
+            top: 280px;
+            max-width: 500px !important;
+            /* bottom: 20px; */
+            overflow: hidden;
+            animation: animate 15s linear infinite;
+            opacity: 0;
+        }
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+        2%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+        18%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+        20%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+        /* 100%{
+        opacity: 0;
+        transform: translateY(0px);
+    } */
+}   
+
+.word span:nth-child(1){
+    animation-delay: 0s;
+}
+.word span:nth-child(2){
+    animation-delay: 5s;
+}
+.word span:nth-child(3){
+    animation-delay: 10s;
+}
+/* .word span:nth-child(4){
+    animation-delay: 19s;
+} */
+
+    }
+/*END landing page */
+
+/*END Landing page */
+
+
+
+/* listbrand */
+@media screen and (min-width:100px){
+    .trustbrand{
+        margin-top: 20px;
+    }
+     .trustbrand > li{
+        padding: 50px;
+    }
+    .trustbrand > li > img{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            z-index: -1;
+    }
+}
+@media screen and (min-width: 576px){}
+@media screen and (min-width: 768px){}
+@media screen and (min-width: 992px){}
+@media screen and (min-width: 1200px){
+    .trustbrand{
+        margin-top: 20px;
+    }
+     .trustbrand > li{
+        padding: 50px;
+    }
+    .trustbrand > li > img{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            /* z-index: -1; */
+    }
+}
+/* END listbrand */
+
+
+/* articleSlideImage */
+
+.topSearch{
+    border-left: 3px solid #ff5500;
+    background-color: #ff550021;
+    width: max-content;
+}
+
+.articleSlideImage{
+    height: 250px;
+    border-top-right-radius: 10px !important;
+    /* width: 300px; */
+}
+
+.articleHeading > p{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.articleSlide{
+    margin-top: 130px;
+    /* background-color: rgb(197, 197, 197); */
+    padding: 10px;
+}
+
+.card-div{
+    box-shadow: 0px 0px 10px #7777 !important;
+    background-color: white;
+    outline: unset !important;
+    border: unset !important;       
+    border-radius: 10px !important;
+    /* border-top-right-radius: 10px !important; */
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+/* listbrand */
+@media screen and (min-width:100px){}
+@media screen and (min-width: 576px){}
+@media screen and (min-width: 768px){}
+@media screen and (min-width: 992px){}
+@media screen and (min-width: 1200px){
+    .upload-body{
+        padding: 35px;
+        font-size: 15px;
+        color: #616161 !important;
+    }
+    .uploadDiv1{
+        position: relative;
+        top: 70px;
+    }
+    .uploadDiv{
+        margin-left: auto !important;
+        margin-right: auto !important;
+        position: absolute;
+        left: 50%;
+        /* right: 50%; */
+        transform: translateX(-50%);
+        /* font-size: 100px; */
+    }
+}
+
+
+
+
+
+
+
+
+
+/* SignUpalert */
+
+.overlayAlertDiv{
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform:translate(50%, -50%);
+    background-color: rgba(255, 255, 255, 0.493);
+    z-index: 110;
+    height: 100vh;
+    width: 100%;
+    /* opacity: 0.5; */
+}
+
+.overlayAlertBtn{
+    color: white;
+    background: teal;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+.overlayAlertBtn:hover{
+    color: white;
+    background: teal;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+.overlayAlert{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    background-color: white;
+    z-index: 120;
+    width: 500px;
+    box-shadow: 0px 0px 40px #7777;
+    border-radius: 10px;
+}
+
+.overlayAlert >div>h2{
+    color: teal;
+}
+
+.overlayAlertText{
+    color: #7777;
+    font-size: 15px;
+}
+.signUpham{
+        margin:5px;
+        padding: 1px;
+        padding-left: 20px;
+        background-color: black;
+        transition: all 0.5s ease;
+        border-radius: 10px;
+        width: 1%;
+        cursor: pointer;
+    }
+
+.signupbar1{
+        -webkit-transform: rotate(45deg) translate(10px, 1px);
+        transform: rotate(45deg) translate(10px, 1px);
+        background-color: black !important;
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease;
+    }
+.signupbar2{
+        transform: rotate(-45deg);
+        background-color: black !important;
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease;
+        position: relative;
+        top: 0.8px;
+        left: 5.8px;
+    }
+
+
+
+/* call to action */
+
+@media screen and (min-width:100px){}
+@media screen and (min-width: 1200px){
+
+    .call-to-action-div{
+        margin-top: 100px;
+    }
+
+    .call-to-action-heading{
+        font-weight: bold;
+    }
+
+    .call-to-action-paragraph{
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .btn-call-to-action{
+        font-size:14px !important;
+        font-weight:bold !important;
+        color:white !important;
+        background-color: #ff7900 !important;
+        padding: 7px 15px !important;
+        border-radius: 10px !important;
+    }
+}
+
+/* product category */
+
+/* .card-container{
+    position: relative;
+    width: 1000px;
+    height: 400px;
+    overflow: hidden;
+}
+
+
+.cards{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(7, 300px);
+    grid-gap: 50px;
+    pointer-events: none;
+} 
+.card{
+    /* border: 1px solid red; */
+    /* border-radius: 50px; */
+    /* overflow: hidden; */
+/* } */
+
+
+
+.card1{
+    max-width: 280px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 10px #7777;
+}
+
+.card-img-top{
+    height:250px;
+    width:350px
+}
+
+.card-body1{
+    padding-top: 27px;
+    padding-left: 25px;
+    padding-bottom: 20px;
+}
+
+.clothTag-h5{
+    font-size: 15px;
+    font-weight: bold;
+    color: black !important;
+}
+
+.clothTag-pieces{
+    font-size: 14px;
+    font-weight: bold !important;
+    text-decoration: unset !important;
+    color: rgba(119, 119, 119, 0.788) !important;
+}
+
+.clothTag-amount{
+    font-size: 14px;
+    font-weight: bold;
+    color: black !important;
+    /* color: rgba(119, 119, 119, 0.788) !important; */
+}
+
+.btn-clothTag{
+    font-size:14px !important;
+    font-weight:bold !important;
+    color:white !important;
+    background-color: #ff7900 !important;
+    padding: 7px 15px !important;
+    border-radius: 10px !important;
+    width: 230px !important;
+}
+
+.btn-clothTag2{
+    font-size:14px !important;
+    font-weight:bold !important;
+    color:white !important;
+    padding: 7px 15px !important;
+    border-radius: 10px !important;
+    width: 230px !important;
+}
+
+.btn-clothTag3{
+    /* font-size:14px !important; */
+    font-weight:bold !important;
+    color:white !important;
+    padding-top: 13px !important;
+    padding-left: 18px;
+    padding-bottom: 0px !important;
+    border-radius: 5px !important;
+    width: 250px !important;
+    height: 29px;
+}
+
+
+
+.btn-clothTag > i {
+    padding-left: 20px;
+}
+
+.each-side-effect{
+    margin: 20px;
+    /* background-color: rgba(192, 192, 192, 0.467); */
+}
+
+.recDimdiv{
+    border-left: 3px solid #ff7900;
+}
+.recDim{
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    margin-left: 10px;
+}
+/* END product category */
+
+
+/* What Brandbarn Offers */
+
+@media screen and (min-width:100px){}
+@media screen and (min-width: 576px){}
+@media screen and (min-width: 768px){}
+@media screen and (min-width: 992px){}
+@media screen and (min-width: 1200px){
+    .offerimg{
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+    }
+    /* .customer-incentive > div h3 {
+
+    } */
+    .customer-incentive > div p{
+        max-width: 300px;
+        color: rgb(119, 119, 119);
+    }
+
+    .fast-delivery > div p{
+        max-width: 300px;
+        color: rgb(119, 119, 119);
+    }
+    .content-selection > div p{
+        max-width: 300px;
+        color: rgb(119, 119, 119);
+    }
+}
+
+
+/* What Brandbarn Offers */
+
+
+/* Forms */
+.form .form-group {
+  margin: 1.2rem 0;
+}
+
+.form .form-text {
+  display: block;
+  margin-top: 0.3rem;
+  color: #888;
+}
+
+.form input[type='text'],
+.form input[type='email'],
+.form input[type='password'],
+.form input[type='date'],
+.form select,
+.form textarea {
+  display: block;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+}
+
+.form input[type='submit'],
+button {
+  font: inherit;
+}
+
+.form .social-input {
+  display: flex;
+}
+
+.form .social-input i {
+  padding: 0.5rem;
+  width: 4rem;
+}
+
+.form .social-input i.fa-twitter {
+  color: #38a1f3;
+}
+.form .social-input i.fa-facebook {
+  color: #3b5998;
+}
+.form .social-input i.fa-instagram {
+  color: #3f729b;
+}
+.form .social-input i.fa-youtube {
+  color: #c4302b;
+}
+.form .social-input i.fa-linkedin {
+color: #0077b5;
+}
+
+
+
+
+
+
+
+
+
+
+/* END SignUpalert */
+
+
+
+/* footer */
+@media screen and (min-width:100px){}
+@media screen and (min-width: 576px){}
+@media screen and (min-width: 768px){}
+@media screen and (min-width: 992px){}
+@media screen and (min-width: 1200px){
+    .footerDiv{
+        border-top: 1px solid black;
+    }
+    .footerDiv2{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .footer-ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-decoration: line-through;
+    }
+    .footer-ul > a{
+        padding: 6px;
+        color: #616161 !important;
+        /* font-weight: bold; */
+        font-size: 15px;
+        max-width: max-content;
+    }
+
+    .footer-ul > a:hover{
+        padding: 6px;
+        color: #ff7900 !important;
+        /* font-weight: bold; */
+        font-size: 15px;
+    }
+
+    .footerBottom{
+        background-color: whitesmoke;
+        padding: 50px 100px;
+    }
+    .footerBottomParagraph{
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-twitter{
+        padding: 8px 14px
+    }
+}
